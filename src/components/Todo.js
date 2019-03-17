@@ -9,10 +9,12 @@ class Todo extends Component {
     return (
         <View style={styles.todoContainer}>
             <View style={styles.textContainer}>
-                <Text>{'wash the dish hgjgjgjg gjyguy'} </Text>
-                <Text>{'today 11:50'}</Text>
+                <Text>{this.props.data.text} </Text>
+                <Text>{this.props.data.time}</Text>
             </View>
-            <TouchableOpacity style={styles.delete}>
+            <TouchableOpacity
+             style={styles.delete}
+             onPress={this.props.removeTodo}>
             <Text style={styles.deleteText}>D</Text>
             </TouchableOpacity>
             
