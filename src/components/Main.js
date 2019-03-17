@@ -21,7 +21,7 @@ class Main extends Component {
 
     addTodo(){
         const todos = this.state.todos;
-        if(this.state.todo !==''){
+        if(this.state.todo){
             const date = moment().valueOf();
             const time = moment(date).format('MMM hh:mm a');
             const newTodo = {
@@ -33,12 +33,10 @@ class Main extends Component {
             this.setState({todo: ''});
         }
     }
-
     removeTodo(key){
         const todos = this.state.todos.filter((todo, index) => index !==key);
         this.setState({todos});
     }
-
   render() {
     const todos = this.state.todos.map((val, key) => {
         return <Todo key={key} data={val} removeTodo={this.removeTodo.bind(this, key)}/>
