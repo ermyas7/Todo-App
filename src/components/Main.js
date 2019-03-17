@@ -7,6 +7,7 @@ import {
     ScrollView,
     StyleSheet,
 } from 'react-native';
+import Todo from './Todo';
 class Main extends Component {
   render() {
     return (
@@ -14,7 +15,8 @@ class Main extends Component {
             <View style={styles.header}>
                 <Text style={styles.headerText}>-TODO APP-</Text>
             </View>
-            <ScrollView style={styles.main}> 
+            <ScrollView style={styles.main}>
+                <Todo/> 
             </ScrollView>
             <View style={styles.footer}>
                 <TextInput
